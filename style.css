@@ -7,65 +7,131 @@
 }
 
 body {
-    background: #fff;
+  background: #fff;
   font-family: "Press Start 2P", system-ui;
   font-family: "Roboto", sans-serif;
 }
 
-.wrapper{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-.wrapper .pre-wrapper{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 300px;
-    width: 800px;
-    /* border: 1px solid black; */
+.wrapper .pre-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 800px;
+  border: 1px solid black;
+  overflow: hidden;
 }
 
-.wrapper h4{
-    text-align: center;
-    font-weight: 400;
-    font-size: 24px;
-    color: #2b2b2b;
-    user-select: none;
+.wrapper h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  color: #2b2b2b;
+  user-select: none;
 }
 
-
-.wrapper p{
-text-align: center;
-font-size: 18px;
-margin-top: 13px;
-color: #2b2b2b;
-font-weight: 400;
-user-select: none;
+.wrapper p {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 13px;
+  color: #2b2b2b;
+  font-weight: 400;
+  user-select: none;
 }
 
-.wrapper .game-wrapper{
-    height: 200px;
-    width: 100%;
-    border: 1px solid blue;
-    margin-top: 10px;
+.wrapper .game-wrapper {
+  height: 200px;
+  width: 100%;
+  margin-top: 10px;
+  /* border: 1px solid blue; */
+  overflow: hidden;
 }
 
-.wrapper .game-wrapper .road{
-    height: 100px;
-    width: 800px;
-    position: absolute;
-    bottom: -23px;
+.wrapper .game-wrapper .road {
+  height: 100px;
+  width: 800px;
+  position: absolute;
+  bottom: -23px;
 }
 
-.wrapper .game-wrapper .road img{
-    height: 100px;
-    width: 1080px;
-    position: absolute;
+.wrapper .game-wrapper .road img {
+  height: 100px;
+  width: 1080px;
+  position: absolute;
+}
+.wrapper .game-wrapper .dino {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  bottom: 46px;
+  left: 10px;
+}
+.wrapper .game-wrapper .dino img {
+  height: 55px;
+  width: 55px;
+}
+.wrapper .game-wrapper .cactus {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  bottom: 45px;
+  right: 45px;
+}
+.wrapper .game-wrapper .cactus img {
+  height: 63px;
+  width: 55px;
+}
+.wrapper .score,
+.wrapper .high-score {
+  position: absolute;
+  top: 130px;
+  right: 0;
+  font-size: 10px;
+  color: #808080;
+  font-family: "Press Start 2P", system-ui;
+}
+.wrapper .high-score {
+  right: 80px;
+}
+.wrapper .game-over {
+  height: 70px;
+  width: 200px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #808080;
+  font-family: "Press Start 2P", system-ui;
+  display: none;
+}
+.wrapper .game-over h2 {
+  font-size: 15px;
+  text-align: center;
+}
+
+.wrapper .game-over .restart-btn {
+  height: 30px;
+  width: 35px;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 47px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .game-over .restart-btn img {
+  height: 100%;
+  width: 100%;
+  background: #fff;
 }
