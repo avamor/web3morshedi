@@ -68,6 +68,19 @@ body {
   height: 100px;
   width: 1080px;
   position: absolute;
+  left: 0;
+  animation: roadAnimate 1.5s linear infinite;
+}
+.wrapper .game-wrapper .road img  .road-active{
+animation: roadAnimate 1.5s linear infinite;
+}
+@keyframes roadAnimate{
+    0%{
+        left: 0;
+    }
+    100%{
+        left:-300px ;
+    }
 }
 .wrapper .game-wrapper .dino {
   height: 55px;
@@ -86,6 +99,18 @@ body {
   position: absolute;
   bottom: 45px;
   right: 45px;
+  animation: cactusAnimate 1.5s linear infinite;
+}
+.wrapper .game-wrapper .cactus.cactus-active {
+    animation: cactusAnimate 1.5s linear infinite;
+}
+@keyframes cactusAnimate{
+    0%{
+        right: -15px;
+    }
+    100%{
+        right:100%;
+    }
 }
 .wrapper .game-wrapper .cactus img {
   height: 63px;
