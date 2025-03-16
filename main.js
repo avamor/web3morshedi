@@ -10,6 +10,7 @@ const scoreText = document.querySelector(".score");
 const gameOver = document.querySelector(".game-over");
 const restartgame = document.querySelector(" .restart-btn");
 const highScoreText = document.querySelector(".high-score");
+const par = document.querySelector(".par");
 
 let gameStart = false;
 let jump = true;
@@ -51,6 +52,7 @@ function startGame() {
 
   dinoRun();
   generateClouds();
+  par.innerHTML = "";
 }
 function dinoRun() {
   runInterval = setInterval(() => {
@@ -108,16 +110,14 @@ function gameEnd() {
   gameOver.style.display = "block";
 }
 function updateHighScore() {
-  //get current high score
   let highScore = localStorage.getItem("high-score");
-  //update high score if necessary
+
   if (score > highScore) {
     localStorage.setItem("high-score", score);
   }
 }
-//restart game function
-restartgame.addEventListener("click", () => {
-  //reload page to restart game
+
+restartgame.addEventListener("click", function () {
   window.location.reload();
 });
 
