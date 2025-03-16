@@ -3,8 +3,9 @@ const wrapper = document.querySelector(".wrapper");
 const dino = document.getElementById("dino");
 const dinoImg = document.getElementById("dino-img");
 const road = document.getElementById("road");
-const cactus = wrapper.querySelector(".cactus");
-const cactus1 = wrapper.querySelector("cactus img");
+const cactus= wrapper.querySelector(".cactus");
+const cactusImg =document.getElementById("cactus-img");
+
 
 let gameStart = false;
 let jump = true;
@@ -18,7 +19,7 @@ function startGame() {
   road.classList.add("road");
   cactus.classList.add("cuctus");
   cactusInterval = setInterval(() => {
-    cactus1.src = `image/${randomCactus()}.png`;
+    cactusImg.src = `image/${randomCactus()}.png`;
   }, 1500);
   dinoRun();
 }
@@ -27,8 +28,8 @@ function dinoRun() {
     dinoImg.src = "image/dinorun1.png";
     setTimeout(() => {
       dinoImg.src = "image/dinorun2.png";
-    }, 200);
-  }, 300);
+    }, 100);
+  }, 200);
 }
 function dinoJump() {
   dino.classList.add("jump");
