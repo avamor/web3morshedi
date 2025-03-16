@@ -69,7 +69,7 @@ body {
   position: absolute;
   left: 0;
 }
-.road {
+.road-active {
   animation: roadAnimate 1.5s linear infinite;
 }
 @keyframes roadAnimate {
@@ -91,13 +91,14 @@ body {
   height: 55px;
   width: 55px;
 }
-.jump {
+.jump-active {
   animation: dinoAnimate 0.5s linear infinite;
 }
 @keyframes dinoAnimate {
   0% {
     bottom: 50px;
   }
+  45%,
   50% {
     bottom: 150px;
   }
@@ -112,7 +113,7 @@ body {
   bottom: 45px;
   right: 45px;
 }
-.cactus {
+.cactus-active {
   animation: cactusAnimate 1.5s linear infinite;
 }
 @keyframes cactusAnimate {
@@ -123,6 +124,57 @@ body {
     right: 100%;
   }
 }
+.wrapper .game-wrapper .clouds {
+  height: 80px;
+  width: 100%;
+  position: absolute;
+}
+.wrapper .game-wrapper .clouds div {
+  height: 50px;
+  width: 60px;
+  background: url("./image/cloud.png");
+  position: absolute;
+  left: -200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+.clouds-active:nth-child(1) {
+  top: 30%;
+  animation: cloudsAnimate 18s linear infinite;
+  animation-delay: 5s;
+}
+.clouds-active:nth-child(2) {
+  top: 23%;
+  animation: cloudsAnimate 23s linear infinite;
+  animation-delay: 8s;
+}
+.clouds-active:nth-child(3) {
+  top: 57%;
+  animation: cloudsAnimate 14s linear infinite;
+}
+ .clouds-active:nth-child(4) {
+  top: 29%;
+  animation: cloudsAnimate 29s linear infinite;
+}
+ .clouds-active:nth-child(5) {
+  top: 35%;
+  animation: cloudsAnimate 36s linear infinite;
+}
+ .clouds-active:nth-child(6) {
+  top: 38%;
+  animation: cloudsAnimate 40s linear infinite;
+  animation-delay: 4s;
+}
+@keyframes cloudsAnimate {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 2000px;
+  }
+}
+
 .wrapper .game-wrapper .cactus img {
   height: 63px;
   width: 55px;
@@ -165,6 +217,7 @@ body {
   top: 47px;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .wrapper .game-over .restart-btn img {
   height: 100%;
